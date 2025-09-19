@@ -1,1 +1,106 @@
+#include <stdio.h>
 
+/*
+Criar um programa em C que permita ao usuário inserir os dados de duas cartas do Super Trunfo. Para cada carta, o usuário deverá fornecer as seguintes informações:
+Estado: Uma letra de 'A' a 'H' (representando um dos oito estados). Tipo: char
+Código da Carta: A letra do estado seguida de um número de 01 a 04 (ex: A01, B03). Tipo: char[] (um array de caracteres, ou string)
+Nome da Cidade: O nome da cidade. Tipo: char[] (string)
+População: O número de habitantes da cidade. Tipo: int
+Área (em km²): A área da cidade em quilômetros quadrados. Tipo: float
+PIB: O Produto Interno Bruto da cidade. Tipo: float
+Número de Pontos Turísticos: A quantidade de pontos turísticos na cidade. Tipo: int
+Conforme aula gravada, os nomes não devem ser compostos, pois exigem outros métodos não ainda abordados.
+*/
+
+//Definição de variáveis.
+
+int main(){
+   
+    char estado[4];
+    char codigo[4];
+    char cidade[40];
+    int populacao;
+    float area;
+    float pib;
+    int pontos;
+    char estado2[4];
+    char codigo2[4];
+    char cidade2[40];
+    int populacao2;
+    float area2;
+    float pib2;
+    int pontos2;
+
+    printf ("SUPER TRUNFO\n");
+    printf ("Para a realização desse jogo, escreva os números sem pontos ou virgulas, não utilize nomes compostos para as cidades e sempre que possível arredonde os valores!\n\n");
+
+//Código para carta 1.
+    printf ("Carta 1:\n");
+    printf ("Escolha uma letra de A até H para representar seu estado: ");
+    scanf ("%s", estado);
+
+    printf ("Código da carta - selecione um número de 1 até 4: ");
+    scanf ("%s", codigo);
+
+    printf ("Informe uma Cidade que pertence ao Estado escolhido: ");
+    scanf ("%s", cidade);
+
+    printf ("Qual a população da cidade de %s? ", cidade);
+    scanf ("%d", &populacao);
+
+    printf ("Qual a área em km² da cidade de %s? ", cidade);
+    scanf ("%f", &area);
+
+    printf ("Qual o PIB de %s? ", cidade);
+    scanf ("%f", &pib);
+
+    printf ("Quantos pontos turísticos existem em %s? ", cidade);
+    scanf ("%d", &pontos);
+
+//Código para carta 2.
+
+    printf ("Carta 2:\n");
+
+    printf ("Escolha uma letra de A até H para representar seu estado: ");
+    scanf ("%s", estado2);
+
+    printf ("Código da carta - selecione um número de 1 até 4: ");
+    scanf ("%s", codigo2);
+
+    printf ("Informe uma Cidade que pertence ao Estado escolhido: ");
+    scanf ("%s", cidade2);
+
+    printf ("Qual a população da cidade de %s? ", cidade2);
+    scanf ("%d", &populacao2);
+
+    printf ("Qual a área em km² da cidade de %s? ", cidade2);
+    scanf ("%f", &area2);
+
+    printf ("Qual o PIB de %s? ", cidade2);
+    scanf ("%f", &pib2);
+
+    printf ("Quantos pontos turísticos existem em %s? ", cidade2);
+    scanf ("%d", &pontos2);
+
+//Leitura das duas cartas.
+
+    printf ("Carta 1:\n");
+    printf ("Estado: %s\n", estado);
+    printf ("Código: %s0%s\n", estado, codigo);
+    printf ("Nome da cidade: %s\n", cidade);
+    printf ("População: %d\n", populacao);
+    printf ("Área: %fkm²\n", area);
+    printf ("PIB: %f bilhões de reais\n", pib);
+    printf ("Número de pontos turísticos: %d\n\n", pontos);
+
+    printf ("Carta 2:\n");
+    printf ("Estado: %s\n", estado2);
+    printf ("Código: %s0%s\n", estado2, codigo2);
+    printf ("Nome da cidade: %s\n", cidade2);
+    printf ("População: %d\n", populacao2);
+    printf ("Área: %fkm²\n", area2);
+    printf ("PIB: %f bilhões de reais\n", pib2);
+    printf ("Número de pontos turísticos: %d\n", pontos2);
+    return 0;
+
+}
